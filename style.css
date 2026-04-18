@@ -1135,6 +1135,115 @@ nav a:not(.btn-nav):hover { color: var(--dourado); }
 .btn-form:hover { background: var(--dourado-claro); transform: translateY(-2px); }
 
 /* ============================================================
+   BLOG
+   ============================================================ */
+.blog-section { background: var(--creme); }
+
+.blog-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.blog-ver-todos {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  transition: color var(--transition);
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+.blog-ver-todos:hover { color: var(--verde); }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  background: var(--branco);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.15);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+.blog-card-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.blog-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.blog-card:hover .blog-card-img img { transform: scale(1.05); }
+
+.blog-card-body {
+  padding: 24px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card-date {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 10px;
+}
+
+.blog-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--verde);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.blog-card-excerpt {
+  font-size: 0.875rem;
+  color: var(--cinza);
+  line-height: 1.75;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.blog-card-link {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  transition: color var(--transition);
+  align-self: flex-start;
+}
+.blog-card-link:hover { color: var(--verde); }
+
+@media (max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+  .blog-header { align-items: flex-start; gap: 12px; }
+}
+
+/* ============================================================
    FAQ
    ============================================================ */
 .faq-section { background: #fff; }
