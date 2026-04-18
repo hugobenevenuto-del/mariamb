@@ -449,6 +449,29 @@ nav a:not(.btn-nav):hover { color: var(--dourado); }
   border: 1px solid rgba(201,168,76,0.25);
 }
 
+.services-specialties {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.spc-tag {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--dourado);
+  letter-spacing: 0.04em;
+}
+
+.spc-sep {
+  color: rgba(201,168,76,0.4);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 /* ---- Abas por profissional ---- */
 .prof-tabs {
   display: flex;
