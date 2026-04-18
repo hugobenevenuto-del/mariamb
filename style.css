@@ -647,6 +647,31 @@ nav a:not(.btn-nav):hover { color: var(--dourado); }
   color: var(--verde);
 }
 
+.svc-card--text {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--branco);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 10px;
+  padding: 28px 20px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.svc-card-nome {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--verde);
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .svc-card--text { flex: 0 0 160px; }
+}
+
 .svc-saiba {
   display: block;
   width: 100%;
