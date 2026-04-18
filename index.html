@@ -457,91 +457,81 @@
       <div class="faq-grid">
 
         <div class="faq-col">
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">Qual a diferença entre fio a fio e volume brasileiro?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>No fio a fio, aplicamos um fio sintético por cílio natural — o resultado é discreto e bem natural. Já o volume brasileiro usa leques com 3 a 8 fios finíssimos em cada cílio, criando um efeito mais encorpado e dramático. A escolha depende do seu estilo e da quantidade de cílios naturais que você tem.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">A extensão de cílios machuca?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
-              <p>Não! O procedimento é totalmente indolor. Durante a aplicação você fica deitada de olhos fechados enquanto a profissional trabalha com delicadeza e precisão. Muitas clientes relaxam tanto que chegam a cochilar. 😊</p>
+            <div class="faq-body" hidden>
+              <p>Não! O procedimento é totalmente indolor. Durante a aplicação você fica deitada de olhos fechados enquanto a profissional trabalha com delicadeza e precisão. Muitas clientes relaxam tanto que chegam a cochilar.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">Quanto tempo dura uma sessão de extensão de cílios?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>A aplicação completa leva em média de 1h30 a 2h30, dependendo da técnica escolhida e da quantidade de cílios. As manutenções são mais rápidas, geralmente entre 45 minutos e 1h30.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">Com que frequência preciso fazer manutenção dos cílios?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>Recomendamos manutenção a cada 2 a 3 semanas. Os cílios naturais têm um ciclo de renovação próprio, então com o tempo os fios vão caindo junto com eles. A manutenção repõe os fios que caíram e mantém o visual sempre impecável.</p>
             </div>
           </div>
-
         </div>
 
         <div class="faq-col">
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">O alongamento de unhas danifica a unha natural?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>Quando feito por profissional qualificada e com os cuidados certos, o alongamento não danifica a unha natural. O segredo está na preparação correta e na remoção adequada. Aqui no estúdio, todo o processo é feito com segurança e respeito à saúde das suas unhas.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">Qual a diferença entre gel, acrílico e fibra de vidro?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>O <strong>gel</strong> tem acabamento mais natural e brilhante, é flexível e confortável. O <strong>acrílico</strong> é mais resistente e durável, ideal para quem tem unhas frágeis. A <strong>fibra de vidro</strong> é a mais leve e fina das três, perfeita para quem busca um resultado discreto e natural. A Dayne vai te ajudar a escolher a melhor opção para o seu dia a dia.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">O que é harmonização facial?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>Harmonização facial é um conjunto de procedimentos estéticos minimamente invasivos que equilibram e realçam os traços do rosto — como preenchimento labial, bichectomia, botox e rinomodelação. O objetivo não é mudar quem você é, mas revelar a sua melhor versão de forma natural e personalizada.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               <span class="faq-q-text">Quem pode fazer peeling químico?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-body" hidden>
               <p>A maioria das pessoas pode fazer peeling químico, mas a indicação depende do tipo de pele, histórico de saúde e objetivo do tratamento. Gestantes, pessoas com feridas abertas ou em uso de certos medicamentos precisam de avaliação prévia. Por isso, sempre fazemos uma consultoria antes do procedimento para garantir o melhor resultado com total segurança.</p>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -605,17 +595,25 @@
     })();
 
     /* ---- FAQ accordion ---- */
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(el => {
-          el.classList.remove('open');
-          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item  = btn.closest('.faq-item');
+        var body  = item.querySelector('.faq-body');
+        var icon  = btn.querySelector('.faq-icon');
+        var open  = btn.getAttribute('aria-expanded') === 'true';
+
+        /* fecha todos os outros */
+        document.querySelectorAll('.faq-item').forEach(function(other) {
+          other.querySelector('.faq-body').hidden = true;
+          other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          other.querySelector('.faq-icon').textContent = '+';
         });
-        if (!isOpen) {
-          item.classList.add('open');
+
+        /* abre ou fecha o clicado */
+        if (!open) {
+          body.hidden = false;
           btn.setAttribute('aria-expanded', 'true');
+          icon.textContent = '−';
         }
       });
     });

@@ -915,14 +915,16 @@ nav a:not(.btn-nav):hover { color: var(--dourado); }
 .faq-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 56px;
+  gap: 0 64px;
   align-items: start;
 }
 
-.faq-col { border-top: 1px solid rgba(201,168,76,0.25); }
+.faq-col {
+  border-top: 1.5px solid var(--dourado);
+}
 
 .faq-item {
-  border-bottom: 1px solid rgba(201,168,76,0.25);
+  border-bottom: 1px solid rgba(201,168,76,0.3);
 }
 
 .faq-q {
@@ -931,62 +933,62 @@ nav a:not(.btn-nav):hover { color: var(--dourado); }
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 22px 0;
+  padding: 20px 0;
   background: none;
   border: none;
   cursor: pointer;
   text-align: left;
 }
 
-.faq-q:hover .faq-q-text { color: var(--dourado); }
-
 .faq-q-text {
   font-family: var(--font-serif);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 400;
-  color: var(--verde);
+  color: #1a1a1a;
   line-height: 1.45;
   transition: color var(--transition);
 }
+.faq-q:hover .faq-q-text { color: var(--dourado); }
 
 .faq-icon {
   flex-shrink: 0;
-  font-family: var(--font-sans);
-  font-size: 1.5rem;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--dourado);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
   font-weight: 300;
   color: var(--dourado);
   line-height: 1;
-  transition: transform var(--transition);
   user-select: none;
+  transition: background var(--transition), color var(--transition);
+}
+.faq-q[aria-expanded="true"] .faq-icon {
+  background: var(--dourado);
+  color: #fff;
 }
 
-.faq-item.open .faq-icon {
-  transform: rotate(45deg);
+.faq-body {
+  padding-bottom: 18px;
 }
-
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.faq-item.open .faq-a {
-  max-height: 400px;
-}
-
-.faq-a p {
+.faq-body p {
   font-size: 0.9rem;
-  color: #5a5a5a;
+  color: #4a4a4a;
   line-height: 1.85;
-  padding-bottom: 20px;
 }
+.faq-body[hidden] { display: none; }
 
 @media (max-width: 768px) {
   .faq-grid {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .faq-col + .faq-col { border-top: none; }
+  .faq-col + .faq-col {
+    border-top: none;
+  }
 }
 
 /* ============================================================
