@@ -511,7 +511,7 @@ nav a:not(.btn-nav):hover { color: var(--dourado); }
 
 .prof-tab-role {
   font-family: var(--font-sans);
-  font-size: 0.66rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
