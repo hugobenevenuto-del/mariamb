@@ -526,10 +526,7 @@
       <div class="contact-form-side">
         <p class="contact-eyebrow">Estamos aqui</p>
         <h2 class="contact-title">Vamos conversar?</h2>
-        <form class="contact-form" action="https://formsubmit.co/hugobenevenuto@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Novo contato – Studio Maria Bonita" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="about:blank" />
+        <form class="contact-form" id="contactForm">
 
           <div class="form-group">
             <label for="nome">Nome Completo</label>
@@ -746,6 +743,17 @@
         menuToggle.classList.remove('open');
         mainNav.classList.remove('open');
       });
+    });
+  </script>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nome     = document.getElementById('nome').value.trim();
+      var servico  = document.getElementById('servico').value.trim();
+      var mensagem = document.getElementById('mensagem').value.trim();
+      var texto    = 'Olá! Me chamo ' + nome + ', tenho interesse em ' + servico + ' e gostaria de: ' + mensagem;
+      window.open('https://wa.me/5521996194593?text=' + encodeURIComponent(texto), '_blank');
     });
   </script>
 
